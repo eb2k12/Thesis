@@ -1,0 +1,17 @@
+Loading net-file from 'GCD.net.xml' ... done (287ms).
+Warning: Unused states in tlLogic '1346905', program '0' in phase 0 after tl-index 13
+Warning: Unused states in tlLogic '30979529', program '0' in phase 0 after tl-index 11
+Warning: Unused states in tlLogic '32334978', program '0' in phase 0 after tl-index 5
+Loading additional-files from 'test1.add.xml' ... done (20ms).
+Loading done.
+Simulation started with time: 0.00
+Simulation ended at time: 150.00
+Performance: 
+ Duration: 810998ms
+ Real time factor: 0.184957
+ UPS: 0.489520
+Vehicles: 
+ Inserted: 3
+ Running: 2
+ Waiting: 0
+

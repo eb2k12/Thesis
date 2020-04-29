@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 04/15/20 16:33:50 by Eclipse SUMO GUI Version 1.5.0
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="GCDnew.net.xml"/>
+        <route-files value="with_bus.rou.xml"/>
+        <additional-files value="test.add.xml"/>
+    </input>
+
+</configuration>

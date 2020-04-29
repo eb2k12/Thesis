@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 04/29/20 12:24:57 by Eclipse SUMO netedit Version 1.5.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="GCDnew.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="GCDnew.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <netedit>
+        <additional-files value="C:\Users\eoinb\Desktop\Thesis\Sumo\Scenario2c\sc2c.add.xml"/>
+        <route-files value="C:\Users\eoinb\Desktop\Thesis\Sumo\Scenario2c\sc2c.rou.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="vType_2" vClass="bus"/>
+    <route edges="4825259#2 -4825258#3 -4825258#2 -22689981#1 110545289#2 110545289#3 -110545289#3 -110545289#2 -110545289#1 110545289#1 22689981#1 4825258#2 4825258#3 102694945 -102694945 -4825258#3 -4825258#2 -4825258#1 -4825258#0 4825258#0 4825258#1 4825258#2 4825258#3 -4825259#2" color="blue" id="bus_route_1">
+		<stop busStop="busStop1a" duration="20"/>
+		<stop busStop="busStop1b" duration="20"/>
+	</route>
+    <route edges="-4825258#3 -4825258#2 -4825258#1 -4825258#0 4825258#0 4825258#1 4825258#2 4825258#3 102694945 -102694945 -4825258#3 -4825258#2 -4825258#1 -4825258#0 4825258#0 4825258#1 4825258#2 4825258#3 102694945" color="yellow" id="bus_route_2">
+		<stop busStop="busStop2a" duration="20"/>
+		<stop busStop="busStop2b" duration="20"/>
+	</route>
+    <route edges="4825259#2 -4825258#3 -4825258#2 -22689981#1 110545289#2 110545289#3 -110545289#3 -110545289#2 -110545289#1 110545289#1 22689981#1 4825258#2 4825258#3 102694945 -102694945 -4825258#3 -4825258#2 -4825258#1 -4825258#0 4825258#0 4825258#1 4825258#2 4825258#3 -4825259#2" color="blue" id="route_1"/>
+    <route edges="-4825258#3 -4825258#2 -4825258#1 -4825258#0 4825258#0 4825258#1 4825258#2 4825258#3 102694945 -102694945 -4825258#3 -4825258#2 -4825258#1 -4825258#0 4825258#0 4825258#1 4825258#2 4825258#3 102694945" color="yellow" id="route_2"/>
+    <route edges="162745564#2 162745564#3 162745564#4 34855952 34855953 455486017 45755442#0 45755442#1 4825272#0 4825272#1 4825272#2 129217471#0 129217471#1 129217471#2 4825258#0 4825258#1 -22689981#1 110545289#2 110545289#3" color="yellow" id="route_3"/>
+	<route edges="162745564#2 162745564#3 162745564#4 34855952 34855953 455486017 45755442#0 45755442#1 4825272#0 4825272#1 4825272#2 129217471#0 129217471#1 129217471#2 4825258#0 4825258#1 -22689981#1 110545289#2 110545289#3" color="yellow" id="bus_route_3">
+		<stop busStop="busStop3a" duration="20"/>
+		<stop busStop="busStop3b" duration="20"/>
+	</route>
+    <route edges="46160696#0 46160696#1 46160696#2 37690117 46160695#0 46160695#1 46160694 455486016 -34855952 34855952 34855953 455486017 45755442#0 45755442#1 4825272#0 4825272#1" color="yellow" id="route_5"/>
+    
+	<route edges="46160696#0 46160696#1 46160696#2 37690117 46160695#0 46160695#1 46160694 455486016 -34855952 34855952 34855953 455486017 45755442#0 45755442#1 4825272#0 4825272#1" color="yellow" id="bus_route_5">
+		<stop busStop="busStop5a" duration="20"/>
+		<stop busStop="busStop5b" duration="20"/>
+	</route>
+    
+	
+	
+	<vehicle id="bus_0" type="vType_2" depart="0.00" color="red" route="bus_route_1"/>
+    <vehicle id="bus_0b" type="vType_2" depart="0.00" color="red" route="bus_route_2"/>
+    <vehicle id="vehicle_0" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_1" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_11" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_12" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_13" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_14" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_2" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_23" type="vType_2" depart="0.00" route="bus_route_5"/>
+    <vehicle id="vehicle_24" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_25" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_26" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_29" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_30" type="vType_2" depart="0.00" route="bus_route_5"/>
+    <vehicle id="vehicle_31" type="vType_2" depart="0.00" route="bus_route_5"/>
+    <vehicle id="vehicle_38" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_41" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_42" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_43" type="DEFAULT_BIKETYPE" depart="0.00" route="route_5"/>
+    <vehicle id="vehicle_44" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_47" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_48" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_49" type="vType_2" depart="0.00" route="bus_route_3"/>
+    <vehicle id="vehicle_56" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_57" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_58" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_59" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_60" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_61" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_62" type="vType_2" depart="0.00" route="bus_route_3"/>
+    <vehicle id="vehicle_67" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_71" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_72" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_73" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_74" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_77" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_78" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_79" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_80" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="vehicle_88" type="DEFAULT_BIKETYPE" depart="0.00" route="route_3"/>
+    <vehicle id="bike_1" type="DEFAULT_BIKETYPE" depart="1.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_1b" type="DEFAULT_BIKETYPE" depart="1.00" departPosLat="right" departSpeed="random" color="yellow" route="route_2"/>
+    <vehicle id="bike_2" type="DEFAULT_BIKETYPE" depart="2.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_2b" type="DEFAULT_BIKETYPE" depart="2.00" departPosLat="right" departSpeed="random" color="yellow" route="route_2"/>
+    <vehicle id="vehicle_3" depart="3.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_3b" depart="3.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_4" depart="4.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_4b" depart="4.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_5" depart="5.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_5b" depart="5.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_6" depart="6.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_6b" depart="6.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_7" depart="7.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_7b" depart="7.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_8" depart="8.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_8b" depart="8.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_9" depart="9.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_9b" depart="9.00" color="red" route="route_2"/>
+    <vehicle id="bike_11" type="DEFAULT_BIKETYPE" depart="10.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_10" depart="10.00" color="red" route="route_1"/>
+    <vehicle id="bike_13" type="DEFAULT_BIKETYPE" depart="11.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bus_12" type="vType_2" depart="11.00" color="red" route="bus_route_2"/>
+    <vehicle id="bike_14" type="DEFAULT_BIKETYPE" depart="12.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_15" depart="13.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_16" depart="14.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_17" depart="15.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_18" depart="16.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_19" depart="17.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_20" depart="18.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_21" depart="19.00" color="red" route="route_1"/>
+    <vehicle id="bike_23" type="DEFAULT_BIKETYPE" depart="20.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_23b" type="DEFAULT_BIKETYPE" depart="20.00" departPosLat="right" departSpeed="random" color="yellow" route="route_2"/>
+    <vehicle id="vehicle_22" depart="20.00" color="red" route="route_1"/>
+    <vehicle id="bike_25" type="DEFAULT_BIKETYPE" depart="21.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_25b" type="DEFAULT_BIKETYPE" depart="21.00" departPosLat="right" departSpeed="random" color="yellow" route="route_2"/>
+    <vehicle id="bus_24" type="vType_2" depart="21.00" color="red" route="bus_route_1"/>
+    <vehicle id="bus_24b" type="vType_2" depart="21.00" color="red" route="bus_route_2"/>
+    <vehicle id="bike_26" type="DEFAULT_BIKETYPE" depart="22.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_26b" type="DEFAULT_BIKETYPE" depart="22.00" departPosLat="right" departSpeed="random" color="yellow" route="route_2"/>
+    <vehicle id="vehicle_27" depart="23.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_27b" depart="23.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_28" depart="24.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_28b" depart="24.00" color="red" route="route_2"/>
+    <vehicle id="bike_29" type="DEFAULT_BIKETYPE" depart="25.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bus_30" type="vType_2" depart="26.00" color="red" route="bus_route_1"/>
+    <vehicle id="bus_30b" type="vType_2" depart="26.00" color="red" route="bus_route_2"/>
+    <vehicle id="bike_31" type="DEFAULT_BIKETYPE" depart="27.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_31b" type="DEFAULT_BIKETYPE" depart="27.00" departPosLat="right" departSpeed="random" color="yellow" route="route_2"/>
+    <vehicle id="vehicle_32" depart="28.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_32b" depart="28.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_33" depart="29.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_33b" depart="29.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_34" depart="30.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_35" depart="31.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_35b" depart="31.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_36" depart="32.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_36b" depart="32.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_37" depart="33.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_37b" depart="33.00" color="red" route="route_2"/>
+    <vehicle id="bike_38" type="DEFAULT_BIKETYPE" depart="34.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_38b" type="DEFAULT_BIKETYPE" depart="34.00" departPosLat="right" departSpeed="random" color="yellow" route="route_2"/>
+    <vehicle id="vehicle_39" depart="36.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_39b" depart="36.00" color="red" route="route_2"/>
+    <vehicle id="vehicle_40" depart="37.00" color="red" route="route_1"/>
+    <vehicle id="bike_41" type="DEFAULT_BIKETYPE" depart="38.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_43" type="DEFAULT_BIKETYPE" depart="41.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_44" type="DEFAULT_BIKETYPE" depart="42.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_45" depart="46.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_46" depart="47.00" color="red" route="route_1"/>
+    <vehicle id="bike_47" type="DEFAULT_BIKETYPE" depart="49.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_49" type="DEFAULT_BIKETYPE" depart="50.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bus_48" type="vType_2" depart="50.00" color="red" route="bus_route_1"/>
+    <vehicle id="vehicle_50" depart="52.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_51" depart="53.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_52" depart="54.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_53" depart="55.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_54" depart="56.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_55" depart="57.00" color="red" route="route_1"/>
+    <vehicle id="bike_59" type="DEFAULT_BIKETYPE" depart="59.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_61" type="DEFAULT_BIKETYPE" depart="61.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_62" type="DEFAULT_BIKETYPE" depart="62.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_63" depart="63.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_64" depart="64.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_65" depart="66.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_66" depart="67.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_68" depart="67.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_69" depart="68.00" color="red" route="route_1"/>
+    <vehicle id="bike_71" type="DEFAULT_BIKETYPE" depart="69.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_70" depart="69.00" color="red" route="route_1"/>
+    <vehicle id="bus_72" type="vType_2" depart="70.00" color="red" route="bus_route_1"/>
+    <vehicle id="bike_73" type="DEFAULT_BIKETYPE" depart="71.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_74" type="DEFAULT_BIKETYPE" depart="72.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_75" depart="76.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_76" depart="77.00" color="red" route="route_1"/>
+    <vehicle id="bike_77" type="DEFAULT_BIKETYPE" depart="79.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bus_78" type="vType_2" depart="80.00" color="red" route="bus_route_2"/>
+    <vehicle id="bike_79" type="DEFAULT_BIKETYPE" depart="81.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_80" type="DEFAULT_BIKETYPE" depart="82.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_81" depart="83.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_82" depart="84.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_83" depart="86.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_84" depart="87.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_85" depart="88.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_86" depart="89.00" color="red" route="route_1"/>
+    <vehicle id="bike_89" type="DEFAULT_BIKETYPE" depart="90.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_87" depart="90.00" color="red" route="route_1"/>
+    <vehicle id="bike_91" type="DEFAULT_BIKETYPE" depart="91.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bus_90" type="vType_2" depart="91.00" color="red" route="bus_route_2"/>
+    <vehicle id="bike_92" type="DEFAULT_BIKETYPE" depart="92.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_93" depart="96.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_94" depart="97.00" color="red" route="route_1"/>
+    <vehicle id="bike_95" type="DEFAULT_BIKETYPE" depart="99.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bus_96" type="vType_2" depart="100.00" color="red" route="bus_route_2"/>
+    <vehicle id="bike_97" type="DEFAULT_BIKETYPE" depart="101.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bike_98" type="DEFAULT_BIKETYPE" depart="102.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_99" depart="102.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_100" depart="103.00" color="red" route="route_1"/>
+    <vehicle id="bike_101" type="DEFAULT_BIKETYPE" depart="104.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_102" depart="106.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_103" depart="107.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_104" depart="108.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_105" depart="109.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_106" depart="110.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_107" depart="111.00" color="red" route="route_1"/>
+    <vehicle id="bike_109" type="DEFAULT_BIKETYPE" depart="112.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="bus_108" type="vType_2" depart="112.00" color="red" route="bus_route_2"/>
+    <vehicle id="bike_110" type="DEFAULT_BIKETYPE" depart="113.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_111" depart="113.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_112" depart="114.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_113" depart="115.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_115" depart="116.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_116" depart="117.00" color="red" route="route_1"/>
+    <vehicle id="vehicle_117" depart="118.00" color="red" route="route_1"/>
+    <vehicle id="bike_119" type="DEFAULT_BIKETYPE" depart="119.00" departPosLat="right" departSpeed="random" color="yellow" route="route_1"/>
+    <vehicle id="vehicle_118" depart="119.00" color="red" route="route_1"/>
+</routes>

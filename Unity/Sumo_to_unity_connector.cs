@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Net.Sockets;
 using System;
+using System.Diagnostics;
 
 
 public class Sumo_to_unity_connector : MonoBehaviour
@@ -22,11 +23,14 @@ public class Sumo_to_unity_connector : MonoBehaviour
         {
             //constructor
             this.id = id;
-            this.current_x = - (curx - 680);
-            this.current_y = 6;
-            this.current_z = -(curz - 1131);
-            this.g = Instantiate(Resources.Load(type_veh)) as GameObject;
+            current_x = - (curx - 680);
+            current_y = 4;
+            current_z = -(curz - 1131);
+            g = Instantiate(Resources.Load(type_veh)) as GameObject;
+            g.name = "VehicleID: " + id + type_veh;
+            g.AddComponent(Type.GetType("collision_detection_m"));
         }
+
         public void Set_angle()
         {
             //Used for vehicle orientation
@@ -36,11 +40,17 @@ public class Sumo_to_unity_connector : MonoBehaviour
         public void SetXZ(float x, float z)
         {
             //update posn values and calculate orientation based on prev,curr values
-            this.prev_x = current_x;
-            this.prev_z = current_z;
-            this.current_x = -(x - 680);
-            this.current_z = -(z - 1131);
+            prev_x = current_x;
+            prev_z = current_z;
+            current_x = -(x - 680);
+            current_z = -(z - 1131);
             Set_angle();
+            UnityEngine.Debug.Log(id);
+            UnityEngine.Debug.Log(current_x);
+            UnityEngine.Debug.Log(current_y);
+            UnityEngine.Debug.Log(current_z);
+            UnityEngine.Debug.Log(angle_c);
+            UnityEngine.Debug.Log(g);
         }
     }
     class Vehicle_list
@@ -50,28 +60,50 @@ public class Sumo_to_unity_connector : MonoBehaviour
         public Vehicle_list()
         {
             //constructor
-            this.list = new Dictionary<string, Vehicle>();
+            list = new Dictionary<string, Vehicle>();
+        }
+        public void remove_veh(string id)
+        {
+            list.Remove(id);
         }
         public void Update(string[] words)
         {
             Dictionary<string, string> live = new Dictionary<string, string>(); 
-            int num_elements = (words.GetLength(0) - 1) / 3;
+            int num_elements = (words.GetLength(0) - 1) / 4;
             int y = 0;
             for (int i = 0; i < num_elements; i++)
             {
-                if (this.list.ContainsKey(words[y]))
+                if (list.ContainsKey(words[y]))
                 {
-                    this.list[words[y]].SetXZ(float.Parse(words[y + 1]), float.Parse(words[y + 2]));
+                    list[words[y]].SetXZ(float.Parse(words[y + 1]), float.Parse(words[y + 2]));
                     live[words[y]] = words[y];
-                    y += 3;
+                    y += 4;
                 }
 
-                else if (!this.list.ContainsKey(words[y]))
+                else if (!list.ContainsKey(words[y]))
                 {
-                    Vehicle v = new Vehicle(words[y], float.Parse(words[y + 1]), float.Parse(words[y + 2]), "car");
-                    this.list.Add(words[y], v);
+                    Vehicle v = new Vehicle(words[y], float.Parse(words[y + 1]), float.Parse(words[y + 2]),words[y + 3]);
+                    list.Add(words[y], v);
                     live[words[y]] = words[y];
-                    y += 3;
+                    y += 4;
+                }
+            }
+            //remove expired vehicles
+            String[] to_remove = new String[100];
+            int i1 = 0;
+            foreach(var item in list.Keys)
+            {
+                if (!live.ContainsKey(item))
+                {
+                    to_remove[i1] = item;
+                    i1++;
+                }
+            }
+            foreach(var item in to_remove)
+            {
+                if (item != null)
+                {
+                    remove_veh(item);
                 }
             }
 
@@ -99,7 +131,10 @@ public class Sumo_to_unity_connector : MonoBehaviour
         {
             Vector3 vec2 = new Vector3(item.current_x, item.current_y, item.current_z);
             item.g.transform.position = vec2;
+
             item.g.transform.rotation = Quaternion.Euler(0, (float)item.angle_c, 0);
+
+
         }
     }
     //*************Network Functions****************************************
@@ -132,13 +167,25 @@ public class Sumo_to_unity_connector : MonoBehaviour
     //*************Unity runnners****************************************
     void Start()
     {
-        tcpclnt.Connect("localhost", 10000);
-        stm = tcpclnt.GetStream();
     }
     void Update()
     {
+        if (Input.GetKeyDown("o"))
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = "sumo_server.py";
+            process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+            process.StartInfo.WorkingDirectory = "C:\\Users\\eoinb\\Desktop\\Thesis\\Sumo\\";
+            process.StartInfo.Arguments = "50";
+            process.Start();
+
+            tcpclnt.Connect("localhost", 10000);
+            stm = tcpclnt.GetStream();
+        }
         if (Input.GetKeyDown("p") && !flag)
         {
+            tcpclnt.Connect("localhost", 10000);
+            stm = tcpclnt.GetStream();
             Send_start();
             ba = new byte[2048];
             string[] pos1_string = Get_info(stm);
@@ -152,12 +199,11 @@ public class Sumo_to_unity_connector : MonoBehaviour
             string[] pos2_string = Get_info(stm);
             Veh_list.Update(pos2_string);
             Display_update();
-            //Debug.Log(Veh_list.list["0"].id.ToString() + " " + Veh_list.list["0"].current_x.ToString() + " " + Veh_list.list["0"].current_y.ToString() + " " + Veh_list.list["0"].current_z.ToString());
+
         }
         if (Input.GetKeyDown("q"))
         {
             Quit();
         }
-
     }
 }

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 02/06/20 15:07:10 by Eclipse SUMO netedit Version 1.4.0
+<!-- generated on 04/15/20 16:26:21 by Eclipse SUMO netedit Version 1.5.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <sumo-net-file value="smalldock.net.xml"/>
+        <sumo-net-file value="GCDnew.net.xml"/>
     </input>
 
     <output>
-        <output-file value="smalldock.net.xml"/>
+        <output-file value="GCDnew.net.xml"/>
     </output>
 
     <processing>
         <geometry.min-radius.fix.railways value="false"/>
         <geometry.max-grade.fix value="false"/>
         <offset.disable-normalization value="true"/>
-        <lefthand value="false"/>
+        <lefthand value="true"/>
     </processing>
 
     <junctions>
@@ -30,7 +30,8 @@
     </pedestrian>
 
     <netedit>
-        <route-files value="C:\Users\eoinb\Desktop\Thesis\test2.rou.xml"/>
+        <additional-files value="C:\Users\eoinb\Desktop\Thesis\Sumo\Scenario2\test.add.xml"/>
+        <route-files value="C:\Users\eoinb\Desktop\Thesis\Sumo\Scenario1\test.rou.xml"/>
     </netedit>
 
     <report>
@@ -40,7 +41,8 @@
 </configuration>
 -->
 
-<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <route edges="-768702593#2 -768702593#1" color="yellow" id="route_0"/>
-    <vehicle id="vehicle_0" depart="1.00" departSpeed="1.00" arrivalSpeed="1.00" color="red" line="1" personNumber="1" containerNumber="1" route="route_0"/>
-</routes>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="busStop1" lane="-44668629#2_0" startPos="67.78" endPos="77.78"/>
+    <busStop id="busStop2" lane="37096473#2_0" startPos="44.34" endPos="54.34"/>
+    <busStop id="busStop3" lane="44668630#0_0" startPos="36.02" endPos="46.02"/>
+</additional>
